@@ -96,14 +96,22 @@ section { padding: 140px 5%; max-width: 1400px; margin: 0 auto; }
 
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-/* Services Section */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-.service-card { border-top: 2px solid rgba(255,255,255,0.05); padding: 35px 0; transition: border-color 0.3s; }
-.service-card:hover { border-color: var(--lime); }
-.service-title { font-family: var(--fh); font-size: 1.5rem; font-weight: 600; margin-bottom: 12px; color: var(--ivory); transition: color 0.3s; display: flex; align-items: center; gap: 12px;}
-.service-title span { color: var(--lime); font-size: 1.2rem; }
-.service-card:hover .service-title { color: var(--lime); }
-.service-desc { color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+/* ── SERVICES ── */
+#services{background:var(--esp);}
+.svc-layout{display:grid;grid-template-columns:260px 1fr;gap:68px;align-items:start;max-width:1360px;margin:0 auto;}
+.svc-sticky{position:sticky;top:110px;}
+.svc-list{display:flex;flex-direction:column;border-top:1px solid rgba(244,240,232,.08);}
+.si{display:grid;grid-template-columns:30px 42px 1fr 18px;align-items:start;gap:16px;padding:26px 0;border-bottom:1px solid rgba(244,240,232,.08);cursor:none;transition:all .35s var(--ease);text-decoration:none;color:inherit;}
+.si:hover{padding-left:10px;border-bottom-color:rgba(200,241,53,.28);}
+.si:hover .si-icon{background:var(--lime);}
+.si:hover .si-arr{color:var(--lime);transform:rotate(45deg);}
+.si-idx{font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.08em;padding-top:4px;}
+.si-icon{width:42px;height:42px;border-radius:9px;background:rgba(244,240,232,.06);border:1px solid rgba(244,240,232,.07);display:flex;align-items:center;justify-content:center;font-size:1.15rem;transition:all .3s;flex-shrink:0;}
+.si-name{font-family:var(--fh);font-size:1.06rem;font-weight:600;letter-spacing:-.02em;margin-bottom:5px;}
+.si-desc{font-size:.84rem;color:var(--muted);line-height:1.6;font-weight:300;}
+.si-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;}
+.si-pill{font-size:.67rem;padding:3px 9px;border-radius:100px;background:rgba(244,240,232,.04);color:var(--muted);border:1px solid rgba(244,240,232,.07);}
+.si-arr{font-size:1.05rem;color:var(--muted);transition:all .3s;margin-top:2px;flex-shrink:0;}
 
 /* Process Section - RESPONSIVE FIX APPLIED */
 .process-grid { 
@@ -311,7 +319,24 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255
     </div>
   </div>
 </section>
-
+<section id="services">
+  <div class="svc-layout">
+    <div class="svc-sticky reveal">
+      <div class="eye">What I Do</div>
+      <h2 class="stitle" style="margin-bottom:16px;">Services Built<br>for Results</h2>
+      <p style="color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:28px;font-weight:300;">Every deliverable is crafted to make your brand look credible, communicate clearly and convert.</p>
+      <a class="btn btn-lime" href="#offer">Book Free Consultation <span class="arr">↗</span></a>
+    </div>
+    <div class="svc-list reveal rd1">
+      <a class="si" href="#contact"><span class="si-idx">01</span><div class="si-icon">🎨</div><div><div class="si-name">Brand Identity Design</div><p class="si-desc">Logo, color palette, typography, brand guidelines — complete visual systems that endure.</p><div class="si-pills"><span class="si-pill">Logo Design</span><span class="si-pill">Brand Guidelines</span><span class="si-pill">Visual Identity</span></div></div><span class="si-arr">↗</span></a>
+      <a class="si" href="#contact"><span class="si-idx">02</span><div class="si-icon">📱</div><div><div class="si-name">UI/UX Design</div><p class="si-desc">User-centred digital experiences for web and mobile — wireframes, prototypes, polished UI.</p><div class="si-pills"><span class="si-pill">Web Design</span><span class="si-pill">App UI</span><span class="si-pill">Prototyping</span></div></div><span class="si-arr">↗</span></a>
+      <a class="si" href="#contact"><span class="si-idx">03</span><div class="si-icon">📢</div><div><div class="si-name">Social Media &amp; Ad Design</div><p class="si-desc">Scroll-stopping posts, stories, reels, carousels and paid ad creatives that perform.</p><div class="si-pills"><span class="si-pill">Posts &amp; Stories</span><span class="si-pill">Ad Creatives</span><span class="si-pill">Content Kits</span></div></div><span class="si-arr">↗</span></a>
+      <a class="si" href="#contact"><span class="si-idx">04</span><div class="si-icon">🖨️</div><div><div class="si-name">Print &amp; Packaging Design</div><p class="si-desc">Brochures, flyers, business cards, packaging, banners — all print-ready in high resolution.</p><div class="si-pills"><span class="si-pill">Brochures</span><span class="si-pill">Packaging</span><span class="si-pill">Banners</span></div></div><span class="si-arr">↗</span></a>
+      <a class="si" href="#contact"><span class="si-idx">05</span><div class="si-icon">🎬</div><div><div class="si-name">Motion Graphics &amp; Video</div><p class="si-desc">Logo animations, explainer videos, reel templates and ad videos that capture attention.</p><div class="si-pills"><span class="si-pill">Logo Animation</span><span class="si-pill">Explainers</span><span class="si-pill">Reel Templates</span></div></div><span class="si-arr">↗</span></a>
+      <a class="si" href="#contact"><span class="si-idx">06</span><div class="si-icon">🧭</div><div><div class="si-name">Brand Strategy &amp; Consulting</div><p class="si-desc">Brand audits, competitive positioning and messaging strategy to own your market.</p><div class="si-pills"><span class="si-pill">Brand Audit</span><span class="si-pill">Positioning</span><span class="si-pill">Strategy</span></div></div><span class="si-arr">↗</span></a>
+    </div>
+  </div>
+</section>
   <section id="process">
     <h2 class="sec-title gsap-reveal">The Proven Methodology</h2>
     <p class="sec-sub gsap-reveal">A meticulous, four-step strategic framework designed to eliminate guesswork and guarantee flawless execution on every single project.</p>
